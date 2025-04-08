@@ -9,14 +9,18 @@ export default function Main(props) {
 
     console.log(list);
 
-    const [currentBox, setBox] = useState(1);
+    const [currentBox, setBox] = useState(0);
 
     const [title, description] = displayBox(currentBox, list);
 
     return (
         <div className="main-box">
 
-            {list.map(elem => <button key={elem.id} onClick={() => {setBox(elem.id)}}>{elem.title}</button>)}
+            {list.map(elem => 
+                <button key={elem.id} onClick={() => setBox(elem.id)}>
+                    {elem.title}
+                </button>
+            )}
 
             <div className="description-box">
                 <h2>{title}</h2>
