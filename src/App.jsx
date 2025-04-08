@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 // Header
 import Header from './components/Header';
 // Main
